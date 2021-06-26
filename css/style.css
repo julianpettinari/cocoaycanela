@@ -19,6 +19,11 @@ main{
     align-items: center;
 }
 
+#img_construction{
+    margin-top: 50px;
+
+}
+
 h1{
     font-size: 35px;
     font-weight: 500;
