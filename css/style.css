@@ -13,9 +13,10 @@ body{
     width:100vw;
 }
 header{
-    display: flex;
+    position:relative;
+    /* display: flex;
     justify-content: center;
-    align-items:flex-end;
+    align-items:flex-end; */
     background-image: url(../img/bkgrnd_macarons_top.jpg);
     width:100vw;
     height:200px;
@@ -23,12 +24,11 @@ header{
 }
 
 header img#logo_cocoa_y_canela{
-    min-height:150px;
-    min-width:150px;
-    max-height: 190px;
-    max-width: 190px;
-    width: 18%;
     position:absolute;
+    height: 190px;
+    width: 190px;
+    left: calc(50% - (190px / 2 ));
+    bottom: -60px;
     align-items: center;
     justify-content:center;
     border-radius:50%;
@@ -36,7 +36,7 @@ header img#logo_cocoa_y_canela{
 }
 
 section.main_content{
-    padding: 5% 5%;
+    padding: calc(5% + 60px) 5% 5% 5%;
     width:100vw;
     display: flex;
     justify-content: space-around;
@@ -49,6 +49,7 @@ section.main_content{
 
 
 section.main_content article{
+    margin: 10px 5px;
     min-width: 160px;
     width:20%;
     height: 40%;
@@ -102,6 +103,19 @@ footer{
 
 
 @media (max-width: 760px){
+
+    header img#logo_cocoa_y_canela{
+        position:absolute;
+        height: 150px;
+        width: 150px;
+        left: calc(50% - (150px / 2 ));
+        bottom: -50px;
+    }
+
+    section.main_content{
+        padding: calc(5% + 50px) 5% 5% 5%;
+    }
+
     section.main_content article{
         
         width:45%;
@@ -111,10 +125,25 @@ footer{
     }
 
 }
-
+.instagram{
+    display:flex;
+    justify-content: center;
+}
 
 
 @media (max-width: 420px){
+
+    header img#logo_cocoa_y_canela{
+        position:absolute;
+        height: 150px;
+        width: 150px;
+        left: calc(50% - (150px / 2 ));
+        bottom: -50px;
+    }
+
+    section.main_content{
+        padding: calc(5% + 50px) 5% 5% 5%;
+    }
 
     section.main_content article{
         
@@ -124,4 +153,15 @@ footer{
         /* border: 3px solid black; */
     
     }
+
+    footer{
+        background-image: url(../img/bkgrnd_macarons_bottom.jpg);
+        height:200px;
+        /* background-size:cover; */
+        background-position: left;
+    }
+
+
+
+
 }
